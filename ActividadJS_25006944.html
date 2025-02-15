@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2025 by anonymous (http://jsbin.com/hiqototuyi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// Solicitar mes y día de nacimiento al usuario
+let mes = parseInt(prompt("Ingrese su mes de nacimiento (1-12):"));
+let dia = parseInt(prompt("Ingrese su día de nacimiento:"));
+
+// Variable para almacenar el signo zodiacal
+let signo = "";
+
+// Evaluar el mes con switch
+switch (mes) {
+    case 1:
+        signo = (dia >= 20) ? "Acuario" : "Capricornio";
+        break;
+    case 2:
+        signo = (dia >= 19) ? "Piscis" : "Acuario";
+        break;
+    case 3:
+        signo = (dia >= 21) ? "Aries" : "Piscis";
+        break;
+    case 4:
+        signo = (dia >= 20) ? "Tauro" : "Aries";
+        break;
+    case 5:
+        signo = (dia >= 21) ? "Géminis" : "Tauro";
+        break;
+    case 6:
+        signo = (dia >= 21) ? "Cáncer" : "Géminis";
+        break;
+    case 7:
+        signo = (dia >= 23) ? "Leo" : "Cáncer";
+        break;
+    case 8:
+        signo = (dia >= 23) ? "Virgo" : "Leo";
+        break;
+    case 9:
+        signo = (dia >= 23) ? "Libra" : "Virgo";
+        break;
+    case 10:
+        signo = (dia >= 23) ? "Escorpio" : "Libra";
+        break;
+    case 11:
+        signo = (dia >= 22) ? "Sagitario" : "Escorpio";
+        break;
+    case 12:
+        signo = (dia >= 22) ? "Capricornio" : "Sagitario";
+        break;
+    default:
+        signo = "Fecha no válida, por favor ingrese datos correctos.";
+}
+
+// Mostrar el resultado en una alerta
+alert("Tu signo zodiacal es: " + signo);
+
+</script>
+</body>
+</html>
