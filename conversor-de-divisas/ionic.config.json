@@ -1,0 +1,10 @@
+{
+  "name": "conversor de divisas",
+  "type": "custom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "hooks": {
+    "build:before": "npm run build"
+  }
+}

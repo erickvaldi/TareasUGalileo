@@ -1,0 +1,24 @@
+{
+  "name": "conversor-de-divisas",
+  "version": "1.0.0",
+  "description": "Actividad 3. Conversor de quetzales a dólares con Ionic.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.6.10",
+    "@capacitor/core": "7.6.10",
+    "@ionic/core": "8.8.19"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.6.10",
+    "vite": "7.2.2",
+    "vite-plugin-static-copy": "3.1.4"
+  }
+}

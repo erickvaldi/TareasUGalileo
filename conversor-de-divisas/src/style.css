@@ -1,0 +1,183 @@
+:root {
+  color-scheme: light;
+  --ion-font-family: Arial, Helvetica, sans-serif;
+  --ion-background-color: #f3f5fa;
+  --ion-text-color: #172b4d;
+  --ion-color-primary: #2855db;
+  --ion-color-primary-rgb: 40, 85, 219;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #234bc1;
+  --ion-color-primary-tint: #3e66df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+}
+
+ion-toolbar {
+  --background: #153672;
+  --color: #ffffff;
+  --min-height: 60px;
+  padding-top: env(safe-area-inset-top);
+}
+
+ion-title {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+ion-content {
+  --background: #f3f5fa;
+}
+
+.conversor {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 22px max(28px, env(safe-area-inset-bottom));
+}
+
+.simbolo {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 19px;
+  border: 1px solid #d8e1f6;
+  border-radius: 14px;
+  color: #2855db;
+  background: #e6edff;
+}
+
+.simbolo svg {
+  width: 27px;
+  height: 27px;
+}
+
+.etiqueta {
+  margin: 0;
+  color: #36528c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+h1 {
+  margin: 10px 0 12px;
+  color: #172b4d;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+}
+
+.descripcion {
+  margin: 0;
+  color: #52627c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tarjeta-formulario {
+  margin: 24px 0 16px;
+  border: 1px solid #dce2ef;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px #172b4d08;
+}
+
+ion-card-content {
+  padding: 22px 18px !important;
+}
+
+ion-input {
+  --background: #ffffff;
+  --border-color: #9aabc6;
+  --border-radius: 10px;
+  --color: #172b4d;
+  --highlight-color-focused: #2855db;
+  --padding-start: 13px;
+  --padding-end: 13px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  min-height: 66px;
+  font-size: 19px;
+}
+
+.tasa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 17px 0 18px;
+  color: #52627c;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.tasa strong {
+  color: #172b4d;
+  font-weight: 700;
+}
+
+ion-button {
+  --border-radius: 10px;
+  --box-shadow: none;
+  min-height: 49px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.resultado {
+  padding: 23px 20px 21px;
+  border: 1px solid #c7d9cb;
+  border-radius: 16px;
+  background: #eaf4ed;
+}
+
+.resultado .etiqueta {
+  color: #346047;
+  font-size: 9px;
+}
+
+.cantidad-dolares {
+  margin: 12px 0 9px;
+  color: #174e30;
+  font-size: clamp(24px, 8vw, 35px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  overflow-wrap: anywhere;
+}
+
+.detalle-conversion {
+  margin: 0;
+  color: #346047;
+  font-size: 12px;
+}
+
+.mensaje-error {
+  margin: 12px 0 0;
+  color: #a32927;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.nota {
+  margin: 20px 9px 0;
+  color: #586881;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}

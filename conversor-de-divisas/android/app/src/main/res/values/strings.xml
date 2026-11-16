@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">conversor de divisas</string>
+    <string name="title_activity_main">conversor de divisas</string>
+    <string name="package_name">edu.galileo.divisapp25006944</string>
+    <string name="custom_url_scheme">edu.galileo.divisapp25006944</string>
+</resources>

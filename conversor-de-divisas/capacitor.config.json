@@ -1,0 +1,8 @@
+{
+  "appId": "edu.galileo.divisapp25006944",
+  "appName": "conversor de divisas",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#f3f5fa"
+  }
+}
