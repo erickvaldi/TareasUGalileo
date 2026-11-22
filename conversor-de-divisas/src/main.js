@@ -14,7 +14,9 @@ const mensajeError = document.getElementById('mensaje-error');
 const resultado = document.getElementById('resultado');
 const cantidadDolares = document.getElementById('cantidad-dolares');
 const detalleConversion = document.getElementById('detalle-conversion');
+const botonPrivacidad = document.getElementById('alternar-privacidad');
 const tipoCambio = 8;
+let montosOcultos = true;
 
 const formatoQuetzales = new Intl.NumberFormat('es-GT', {
   style: 'currency',
@@ -26,6 +28,32 @@ const formatoQuetzales = new Intl.NumberFormat('es-GT', {
 const formatoDolares = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2
+});
+
+// Privacidad visual: ocultar el campo de entrada y los dos textos del resultado.
+function actualizarPrivacidad() {
+  entradaQuetzales.type = montosOcultos ? 'password' : 'text';
+  botonPrivacidad.textContent = montosOcultos ? 'Mostrar montos' : 'Ocultar montos';
+  botonPrivacidad.setAttribute('aria-pressed', String(montosOcultos));
+
+  if (resultado.hidden) {
+    return;
+  }
+
+  const quetzales = Number(entradaQuetzales.value);
+  const dolares = quetzales / tipoCambio;
+
+  cantidadDolares.textContent = montosOcultos
+    ? 'US$ ••••••'
+    : 'US$' + formatoDolares.format(dolares);
+  detalleConversion.textContent = montosOcultos
+    ? 'Q •••••• ÷ 8'
+    : formatoQuetzales.format(quetzales) + ' ÷ 8';
+}
+
+botonPrivacidad.addEventListener('click', function () {
+  montosOcultos = !montosOcultos;
+  actualizarPrivacidad();
 });
 
 formulario.addEventListener('submit', function (evento) {
@@ -42,16 +70,14 @@ formulario.addEventListener('submit', function (evento) {
     return;
   }
 
-  // Para convertir quetzales a dólares, se divide la cantidad entre ocho.
-  const dolares = quetzales / tipoCambio;
-
   mensajeError.hidden = true;
-  cantidadDolares.textContent = 'US$' + formatoDolares.format(dolares);
-  detalleConversion.textContent = formatoQuetzales.format(quetzales) + ' ÷ 8';
   resultado.hidden = false;
+  actualizarPrivacidad();
 });
 
 entradaQuetzales.addEventListener('ionInput', function () {
   resultado.hidden = true;
   mensajeError.hidden = true;
 });
+
+actualizarPrivacidad();

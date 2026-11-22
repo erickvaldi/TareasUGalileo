@@ -94,6 +94,10 @@ h1 {
   box-shadow: 0 6px 18px #172b4d08;
 }
 
+#alternar-privacidad {
+  margin-top: 20px;
+}
+
 ion-card-content {
   padding: 22px 18px !important;
 }
